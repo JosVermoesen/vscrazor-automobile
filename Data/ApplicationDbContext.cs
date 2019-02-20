@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+
+using vscrazor_automobile.Models;
 
 namespace vscrazor_automobile.Data
 {
@@ -12,5 +11,9 @@ namespace vscrazor_automobile.Data
             : base(options)
         {
         }
+
+        public DbSet<ServiceType> ServiceType { get; set; }
+        // dotnet ef migrations add addServiceTypeToDB
+        // dotnet ef database update
     }
 }
